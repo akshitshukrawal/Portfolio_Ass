@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { X } from "lucide-react"; // Import close icon
 import geminiBot from "@/api/google-gemini";
 
-export default function Chatbox() {
+export default function Chatbox({ onClose }) { // Add onClose prop
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [typingMessage, setTypingMessage] = useState("");
@@ -23,7 +24,7 @@ export default function Chatbox() {
         clearInterval(typingInterval);
         setIsTyping(false);
       }
-    }, 20); // Adjust typing speed here
+    }, 20);
   };
 
   const sendMessage = async () => {
@@ -37,13 +38,12 @@ export default function Chatbox() {
       const response = await geminiBot(input);
       typeMessage(response);
 
-      // Add the fully typed message to messages after typing completes
       setTimeout(() => {
         setMessages((prevMessages) => [
           ...prevMessages, 
           { text: response, sender: "bot" }
         ]);
-      }, response.length * 20); // Match typing duration
+      }, response.length * 20);
     } catch (error) {
       const errorMessage = "Sorry, there was an error processing your request.";
       typeMessage(errorMessage);
@@ -57,14 +57,12 @@ export default function Chatbox() {
     }
   };
 
-  // Auto-scroll to bottom whenever messages or typing change
   useEffect(() => {
     if (messageContainerRef.current) {
       messageContainerRef.current.scrollTop = messageContainerRef.current.scrollHeight;
     }
   }, [messages, typingMessage]);
 
-  // Send on Enter key
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
@@ -73,7 +71,19 @@ export default function Chatbox() {
   };
 
   return (
-    <div className="w-full h-full h-[500px] bg-white border border-gray-300 shadow-lg rounded-lg flex flex-col">
+    <div className="w-full h-full h-[500px] bg-white border border-gray-300 shadow-lg rounded-lg flex flex-col relative pt-3">
+      {/* Header with Close Button */}
+      <div className="flex justify-between items-center p-3 border-b">
+        <h2 className="text-lg font-semibold">Resume Chat</h2>
+        <button 
+          onClick={onClose}
+          className="text-gray-500 hover:text-gray-700 transition-colors"
+          aria-label="Close chat"
+        >
+          <X size={24} />
+        </button>
+      </div>
+
       {/* Chat Messages */}
       <div 
         ref={messageContainerRef} 

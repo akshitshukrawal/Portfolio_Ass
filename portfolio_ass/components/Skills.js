@@ -44,30 +44,30 @@ export function Skills() {
   return (
     <section 
       id="skills" 
-      className="p-8 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen"
+      className="p-4 sm:p-8 bg-gradient-to-br from-blue-50 to-indigo-100"
     >
-      <h2 className="text-3xl font-extrabold mb-8 text-gray-800 border-b-4 border-blue-500 pb-2 text-center tracking-wider">
+      <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 sm:mb-8 text-gray-800 border-b-4 border-blue-500 pb-2 text-center tracking-wider">
         Technical Skills
       </h2>
       
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         {skillCategories.map((category, index) => (
           <div 
             key={index} 
-            className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-6"
+            className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-4 sm:p-6"
           >
-            <h3 className="text-xl font-bold text-blue-700 mb-4 border-b pb-2">
+            <h3 className="text-lg sm:text-xl font-bold text-blue-700 mb-3 sm:mb-4 border-b pb-2">
               {category.category}
             </h3>
             
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
               {category.skills.map((skill, skillIndex) => (
                 <div 
                   key={skillIndex} 
-                  className="flex items-center space-x-3"
+                  className="flex items-center space-x-2 sm:space-x-3 p-1 sm:p-2 bg-gray-50 rounded-md"
                 >
                   <div 
-                    className="w-2 h-2 rounded-full"
+                    className="w-2 h-2 rounded-full flex-shrink-0"
                     style={{
                       backgroundColor: 
                         skill.level === "Advanced" ? "#10B981" : 
@@ -75,10 +75,10 @@ export function Skills() {
                         "#6B7280"
                     }}
                   />
-                  <span className="text-gray-800 font-medium">
+                  <span className="text-xs sm:text-sm text-gray-800 font-medium truncate">
                     {skill.name}
                   </span>
-                  <span className="text-xs text-gray-500 ml-auto">
+                  <span className="text-[10px] sm:text-xs text-gray-500 ml-auto">
                     {skill.level}
                   </span>
                 </div>

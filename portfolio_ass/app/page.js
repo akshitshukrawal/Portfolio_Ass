@@ -30,7 +30,7 @@ export default function Home() {
       <Navbar onChatClick={handleChatClick} isChatOpen={isChatOpen} />
 
       {/* Main Content - Added top padding to create space below navbar */}
-      <main className="pt-24 p-4">  {/* Increased top padding to pt-24 (96px) */}
+      <main className="p-4">  {/* Increased top padding to pt-24 (96px) */}
         <section id="about" className="p-4">
           <About />
         </section>
@@ -71,7 +71,7 @@ export default function Home() {
 
         {/* Chatbox Container */}
         <div className="p-4 h-[calc(100%-4rem)]">
-          <Chatbox />
+          <Chatbox onClose={handleCloseChat}/>
         </div>
       </div>
     </div>
