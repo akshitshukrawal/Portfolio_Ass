@@ -1,0 +1,128 @@
+{
+    "name": "Akshit Shukrawal",
+    "contact": {
+      "phone": "+91-9314460756",
+      "email": ["akshitshukrawal@gmail.com", "akshitsh22@iitk.ac.in"],
+      "linkedin": "https://www.linkedin.com/in/akshit-shukrawal-171804255/",
+      "github": "https://github.com/akshitshukrawal",
+      "codeforces": "https://codeforces.com/profile/akshit_shukrawal"
+    },
+    "education": [
+      {
+        "year": "2022 - Present",
+        "degree": "B.Tech",
+        "institution": "Indian Institute of Technology, Kanpur",
+        "cpi": "8/10"
+      },
+      {
+        "year": "2022",
+        "degree": "RBSE(XII)",
+        "institution": "M B I SR SEC SCH, Kota",
+        "percentage": "83%"
+      },
+      {
+        "year": "2020",
+        "degree": "CBSE(X)",
+        "institution": "Lawrence and Mayo Public School, Kota",
+        "percentage": "91%"
+      }
+    ],
+    "achievements": [
+      {
+        "description": "Secured All India Rank of 3609 in JEE Mains 2022 among 1.5 million candidates."
+      },
+      {
+        "description": "Secured All India Rank of 6705 in JEE Advanced 2022 among 1.5 lakh shortlisted candidates."
+      },
+      {
+        "description": "Attained Codeforces Specialist status with a top rating of 1511 & Global Rank 1885 in Codeforces Round 951."
+      }
+    ],
+    "projects": [
+      {
+        "title": "ShareMe - Social Media Web App",
+        "type": "Self Project",
+        "technologies": ["React", "Tailwind CSS", "Sanity.io"],
+        "description": "Developed a dynamic social media platform for sharing photos, engaging through comments, and fostering community.",
+        "features": [
+          "Google authentication for secure login",
+          "Responsive UI using React and Tailwind CSS",
+          "Sanity.io for content management"
+        ],
+        "outcome": [
+          "Secure authentication",
+          "Optimized performance and scalability",
+          "Engagement through commenting system"
+        ],
+        "repo": "https://github.com/akshitshukrawal/Shareme"
+      },
+      {
+        "title": "Credit Card Fraud Detection",
+        "type": "Self Project",
+        "technologies": ["Logistic Regression", "KNN", "Random Forest", "Decision Tree", "SVM"],
+        "description": "Developed a machine learning model to detect fraudulent credit card transactions from an imbalanced dataset.",
+        "approach": [
+          "Implemented multiple classification algorithms",
+          "Evaluated models with ROC, learning curves, F1-score, and confusion matrix",
+          "Used advanced kernel functions in SVM"
+        ],
+        "outcome": "Achieved 96% accuracy in fraud detection.",
+        "repo": "https://github.com/akshitshukrawal/Credit_Card_Fraud_Detection"
+      },
+      {
+        "title": "Portfolio - Web App",
+        "type": "Self Project",
+        "technologies": ["Next.js", "Three.js", "Framer Motion", "Sentry"],
+        "description": "Developed a responsive portfolio web app with animations and 3D graphics.",
+        "features": [
+          "Server-Side Rendering (SSR) with Next.js",
+          "3D graphics using Three.js",
+          "Framer Motion effects and Bentogrid layout",
+          "Sentry for performance monitoring"
+        ],
+        "repo": "https://github.com/akshitshukrawal/Portfolio"
+      },
+      {
+        "title": "Snake Game using Reinforcement Learning",
+        "type": "Self Project",
+        "technologies": ["Reinforcement Learning", "Pygame", "Q-Learning"],
+        "description": "Developed an RL agent to autonomously play the Snake game.",
+        "approach": [
+          "Engineered game environment using Pygame",
+          "Designed state representation capturing game features",
+          "Trained model using Q-learning"
+        ],
+        "outcome": [
+          "Maximum score of 72 in 150 games",
+          "Average score of 27 after 1000 training episodes"
+        ],
+        "repo": "https://github.com/akshitshukrawal/Snake-Game"
+      }
+    ],
+    "technical_skills": {
+      "programming_languages": ["C++", "C", "JavaScript", "Python"],
+      "libraries": ["NumPy", "Pygame", "STL", "Scikit-learn"],
+      "web_technologies": ["HTML", "Tailwind", "JavaScript", "React", "Next.js", "Sanity.io"],
+      "utilities": ["LaTeX", "Jupyter", "Git", "GitHub"]
+    },
+    "relevant_courses": [
+      "Introduction to Electronics",
+      "Fundamentals of Computing",
+      "Economy, Society & Public Policy",
+      "Ordinary Differential Equations",
+      "Partial Differential Equations",
+      "Linear Algebra",
+      "Single Variable Calculus",
+      "Energy Systems",
+      "Classical Electrodynamics",
+      "Dynamics",
+      "Machine Learning for Engineers",
+      "Engineering Graphics"
+    ],
+    "extra_curricular": [
+      {
+        "activity": "Achieved 1st position for Badminton in Fresher’s Inferno - IITK’s inter-hall sports tournament."
+      }
+    ]
+  }
+  
